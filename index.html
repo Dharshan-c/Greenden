@@ -40,15 +40,13 @@
 
     </nav>
 <!--Side navbar-->
-   <section class="sidenav w-[50%] h-[100%] bg-green-100 fixed top-0 right-[-50%] flex justify-center md:hidden z-40 transition-all duration-1000">
-        <p class="closenav  text-2xl absolute top-3 right-5 cursor-pointer  ">x</p>
+    <section class="side-nav w-[50%] h-[100%] bg-green-100 fixed top-0 right-[-50%] flex justify-center md:hidden z-40 transition-all duration-1000">
+        <p class="x-icon  text-2xl absolute top-3 right-5 cursor-pointer  ">x</p>
         <ul class="  gap-10 flex flex-col text-gray-600 mt-20 ">
             <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
             <li><a class="hover:underline hover:text-black" href="product.html">Products</a></li>
             <li><a class="hover:underline hover:text-black" href="contact.html">Contact</a> </li>
         </ul>
-
-    </section>
 
             
        
@@ -199,16 +197,21 @@
     </section>
     <script>
     var sidenav=document.getElementById("sidenav")
-    var menuicon=document.getElementById("menuicon") 
-     var closenav=document.getElementById("closenav")
-    menuicon.addEventListener("click",function()
-                              {
-                                  sidenav.style.right=0
-                              })
-     closenav.addEventListener("click",function()
-                              {
-                                  closenav.style.right="-50%"
-                              })
+    let slider_nav=document.querySelector(".side-nav")
+let x_icon=document.querySelector(".x-icon")
+
+
+
+bar.addEventListener("click",()=>{
+    slider_nav.classList.remove("right-[-50%]")
+    slider_nav.classList.add("right-[0%]")
+
+})
+x_icon.addEventListener("click",()=>{
+    slider_nav.classList.add("right-[-50%]")
+    slider_nav.classList.remove("right-[0%]")
+
+})
 </script>
 </body>
 
